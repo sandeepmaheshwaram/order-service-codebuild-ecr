@@ -14,8 +14,8 @@ phases:
       - echo Build started on `date`
       - mvn clean install
       - echo Building the Docker image...
-      - docker build -t $REPOSITORY_URI:latest .
-      - docker tag $REPOSITORY_URI:latest $REPOSITORY_URI:$IMAGE_TAG
+      - docker build -t sandeep .
+      - docker tag sandeep:latest 190345608115.dkr.ecr.us-east-1.amazonaws.com/sandeep:latest
   post_build:
     commands:
       - echo Build completed on `date`
